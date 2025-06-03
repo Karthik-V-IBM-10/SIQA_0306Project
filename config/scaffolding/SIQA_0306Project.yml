@@ -8,17 +8,43 @@ packages:
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 - name: SSL_JDBC_Test
+  version: "1.0"
   gitServerName: SIQAPsurGit
   gitUrl: https://github.com/prabhakarsag
   gitUsername: prabhakarsag
   gitBranch: main
 - name: JMS2waySSL
+  version: "1.0"
   gitServerName: SIQAPsurGit
   gitUrl: https://github.com/prabhakarsag
   gitUsername: prabhakarsag
   gitBranch: main
 - name: TPP_services_in_FCS
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/Karthik-V-IBM-10
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
+services:
+- serviceName: project.siqa_0306.integrations:SSL_JDBC_test
+  packages:
+  - name: SIQA_0306Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: SSL_JDBC_Test.services:insert_ssl
+  packages:
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
